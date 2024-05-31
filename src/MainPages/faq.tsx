@@ -3,8 +3,8 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const faqData = [
     {
-        question: "What cleaning services do you offer?",
-        answer: "We offer a comprehensive range of cleaning services including window cleaning, gutter cleaning, pressure washing, office cleaning, and more. Each service is designed to meet the specific needs of both residential and commercial clients.",
+        question: "What other services do you offer?",
+        answer: "In addition to window cleaning, we offer a comprehensive range of services including digger hire, general property maintenance such as gutter fixing, and sorting out patios. Each service is designed to meet the specific needs of both residential and commercial clients.",
     },
     {
         question: "What does 'satisfaction guaranteed' really mean?",
@@ -24,16 +24,13 @@ const faqData = [
     },
     {
         question: "What is included in a standard cleaning service?",
-        answer: "Our standard cleaning service includes dusting, vacuuming, sweeping, mopping, kitchen cleaning, bathroom cleaning, and trash removal. Additional services can be added based on your specific needs.",
+        answer: "Our standard cleaning service includes cleaning the windows, glass, frames, sills, and doors. Additional services can be added based on your specific needs.",
     },
     {
         question: "How does your pricing work?",
         answer: "Our pricing is transparent and based on the type of service, the size of the area to be cleaned, and the frequency of cleaning. We provide free estimates after assessing your specific cleaning needs.",
     },
-    {
-        question: "Can I use your cleaning services for special events?",
-        answer: "Yes, you can hire our cleaning services for special events such as weddings, parties, conferences, and more. We ensure your venue is spotless before, during, and after your event.",
-    },
+
 ];
 
 export default function FAQ() {

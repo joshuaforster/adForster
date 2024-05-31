@@ -100,7 +100,7 @@ const services: { [key: string]: Service } = {
     image: '/images/about.jpg',
     details: `Our window cleaning services cater to both domestic and commercial properties.<br /><br />
       We ensure a clean and healthy environment for your home or business. Clean windows can improve productivity, health, and overall well-being.<br /><br />
-      Our team provides customisenpmd window cleaning solutions to meet your specific needs.<br /><br />
+      Our team provides customised window cleaning solutions to meet your specific needs.<br /><br />
       Trust us to deliver exceptional results and keep your windows spotless.`,
     moreInfoLink: '/services/domestic-commercial'
   },
@@ -130,7 +130,21 @@ const services: { [key: string]: Service } = {
       Trust us to keep your mini digger in excellent condition and ready for your next project.`,
     moreInfoLink: '/services/mini-digger'
   },
+  'roof-cleaning': {
+    id: 'roof-cleaning',
+    title: 'Roof Cleaning',
+    description: 'Professional roof cleaning services to remove moss, algae, and debris, ensuring a clean and well-maintained roof.',
+    path: '/services/roof-cleaning',
+    icon: FaTractor,
+    image: '/images/placeholder.jpg',  // Placeholder image path
+    details: `Our roof cleaning services help maintain the integrity and appearance of your roof.<br /><br />
+      We remove moss, algae, and debris to prevent damage and extend the lifespan of your roof. Clean roofs can improve the overall look of your property.<br /><br />
+      Our team uses safe and effective methods to clean your roof without causing damage. Regular roof cleaning can prevent costly repairs and maintain property value.<br /><br />
+      Trust us to keep your roof in excellent condition with our professional cleaning services.`,
+    moreInfoLink: '/services/roof-cleaning'
+  }
 };
+
 
 type ServicesContextType = {
   services: { [key: string]: Service };
