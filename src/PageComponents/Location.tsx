@@ -6,8 +6,8 @@ import React from 'react';
                 <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Locations We Serve</h2>
-                        <p className="mb-4  dark:text-white">
-                            At AD Forster Window Cleaning, we focus mainly on Spixworth, Norwich, and the surrounding areas. We are dedicated to providing top-quality window cleaning services that enhance your home or business, ensuring cleanliness and clarity.
+                        <p className="mb-4 dark:text-white">
+                            At AD Forster Window Cleaning, we focus mainly on Spixworth, Norwich, and the surrounding areas, covering postcodes NR1 to NR28. We are dedicated to providing top-quality window cleaning services that enhance your home or business, ensuring cleanliness and clarity.
                         </p>
                         <p className=' dark:text-white'>
                             We are committed to delivering efficient and thorough cleaning services to keep your windows spotless and your spaces bright.

@@ -94,14 +94,14 @@ const services: { [key: string]: Service } = {
   'domestic-commercial': {
     id: 'domestic-commercial',
     title: 'Domestic and Commercial',
-    description: 'Tailored cleaning services to meet the specific needs of both homes and businesses, ensuring a clean and welcoming environment.',
+    description: 'Tailored window cleaning services to meet the specific needs of both homes and businesses, ensuring a clear and welcoming environment.',
     path: '/services/domestic-commercial',
     icon: FaBuilding,
     image: '/images/about.jpg',
-    details: `Our cleaning services cater to both domestic and commercial properties.<br /><br />
-      We ensure a clean and healthy environment for your home or business. Clean spaces can improve productivity, health, and overall well-being.<br /><br />
-      Our team provides customized cleaning solutions to meet your specific needs. From regular office cleaning to one-off residential deep cleans, we have you covered.<br /><br />
-      Trust us to deliver exceptional results and keep your spaces spotless.`,
+    details: `Our window cleaning services cater to both domestic and commercial properties.<br /><br />
+      We ensure a clean and healthy environment for your home or business. Clean windows can improve productivity, health, and overall well-being.<br /><br />
+      Our team provides customisenpmd window cleaning solutions to meet your specific needs.<br /><br />
+      Trust us to deliver exceptional results and keep your windows spotless.`,
     moreInfoLink: '/services/domestic-commercial'
   },
   'patio-regular-cleans': {
