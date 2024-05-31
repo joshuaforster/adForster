@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import Button from '../CustomComponents/buttons';
 
 export default function Contact() {
   return (
@@ -34,7 +33,7 @@ export default function Contact() {
               <div className="flex mt-4 -mx-1.5">
                 <a
                   className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="www.google.com"
                 >
                   <svg
                     className="w-10 h-10 fill-current"
@@ -48,7 +47,7 @@ export default function Contact() {
 
                 <a
                   className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="www.google.com"
                 >
                   <svg
                     className="w-8 h-8"
@@ -73,7 +72,7 @@ export default function Contact() {
 
                 <a
                   className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="www.google.com"
                 >
                   <svg
                     className="w-8 h-8"
@@ -90,7 +89,7 @@ export default function Contact() {
 
                 <a
                   className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="www.google.com"
                 >
                   <svg
                     className="w-8 h-8"

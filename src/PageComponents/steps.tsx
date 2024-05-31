@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Button from "../CustomComponents/buttons";
-import { createClient, Entry } from 'contentful';
+
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-const client = createClient({
-  space: '7y2nhmah12fi',
-  accessToken: 'VPNyQgxB1pWAka3k7hdMjZyWTPNuBmdWTmVnF1UydtQ'
-});
 
 interface StepsFields {
   bookingProcess: string;
