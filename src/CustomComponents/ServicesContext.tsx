@@ -135,8 +135,8 @@ const services: { [key: string]: Service } = {
     title: 'Roof Cleaning',
     description: 'Professional roof cleaning services to remove moss, algae, and debris, ensuring a clean and well-maintained roof.',
     path: '/services/roof-cleaning',
-    icon: FaTractor,
-    image: '/images/placeholder.jpg',  // Placeholder image path
+    icon: FaHome,
+    image: '/images/roof.jpg',  // Placeholder image path
     details: `Our roof cleaning services help maintain the integrity and appearance of your roof.<br /><br />
       We remove moss, algae, and debris to prevent damage and extend the lifespan of your roof. Clean roofs can improve the overall look of your property.<br /><br />
       Our team uses safe and effective methods to clean your roof without causing damage. Regular roof cleaning can prevent costly repairs and maintain property value.<br /><br />

@@ -29,6 +29,7 @@ export default function Gallery() {
         { type: 'image', imageUrl: 'images/house.jpg' },
         { type: 'image', imageUrl: 'images/conservatories.jpg' },
         { type: 'image', imageUrl: 'images/terrace.jpg' },
+        { type: 'image', imageUrl: 'images/roof.jpg' },
 
         // Add more items as needed
     ];
