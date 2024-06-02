@@ -19,7 +19,7 @@ const Services: React.FC = () => {
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-          {Object.values(services).map((service) => {
+          {services.map((service) => {
             const Icon = service.icon;
             return (
               <div key={service.id} className="p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-md hover:scale-105 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 hover:shadow-lg hover:border dark:border-gray-700">

@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../CustomComponents/buttons';
 
-
-
 interface HeroFields {
   headline: string;
   subHeadline: string;
+  mainImage?: { sys: { id: string } } | { url: string };
 }
 
 interface FetchResponse {
   items: Array<{
     fields: HeroFields;
   }>;
+  includes?: {
+    Asset: Array<{
+      sys: { id: string };
+      fields: { file: { url: string } };
+    }>;
+  };
 }
 
 const Hero: React.FC = () => {
@@ -31,7 +36,20 @@ const Hero: React.FC = () => {
       })
       .then((data: FetchResponse) => {
         if (data.items.length > 0) {
-          setContent(data.items[0].fields);
+          const fields = data.items[0].fields;
+
+          if (fields.mainImage && 'sys' in fields.mainImage) {
+            const mainImageId = fields.mainImage.sys.id;
+            const mainImageAsset = data.includes?.Asset.find(asset => asset.sys.id === mainImageId);
+
+            if (mainImageAsset) {
+              fields.mainImage = { url: mainImageAsset.fields.file.url };
+            } else {
+              setError('Main image not found');
+            }
+          }
+
+          setContent(fields);
         } else {
           setError('Content not found');
         }
@@ -68,7 +86,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div className="md:col-span-5 flex items-center justify-center md:justify-end">
-          <img className="w-full md:w-auto" src="images/hero.jpg" alt="mockup" />
+          <img className="w-full md:w-auto" src={(content?.mainImage && 'url' in content.mainImage) ? content.mainImage.url : 'images/hero.jpg'} alt="mockup" />
         </div>
       </div>
     </section>

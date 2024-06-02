@@ -20,7 +20,7 @@ const ServiceDropdown: React.FC<ServiceDropdownProps> = ({ isDropdownOpen, toggl
         } absolute left-1/2 transform -translate-x-1/2 lg:block w-full lg:w-auto bg-white dark:bg-gray-800 text-base z-10 divide-y divide-gray-100 dark:divide-gray-600 rounded shadow-lg`}
       >
         <ul className="py-1 text-center">
-          {Object.values(services).map((service) => (
+          {services.map((service) => (
             <li key={service.id}>
               <Link
                 to={service.path}

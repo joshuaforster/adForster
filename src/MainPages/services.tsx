@@ -1,7 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useServices } from '../CustomComponents/ServicesContext';  // Import the useServices hook from your context
-import Button from '../CustomComponents/buttons';  // Make sure to import your custom button component
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
+import { useServices } from '../CustomComponents/ServicesContext';
+import Button from '../CustomComponents/buttons';
 
 export default function ServiceDetail() {
   const { id } = useParams<{ id: string }>();
@@ -13,6 +15,15 @@ export default function ServiceDetail() {
     return <div>Service not found</div>;
   }
 
+  const renderOptions = {
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
+        return <p className="mb-4">{children}</p>;
+      },
+      // You can add more custom renderers here if needed
+    },
+  };
+
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
@@ -20,7 +31,9 @@ export default function ServiceDetail() {
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             {service.title}
           </h2>
-          <p className="mb-4" dangerouslySetInnerHTML={{ __html: service.details || '' }} />
+          <div className="mb-4">
+            {documentToReactComponents(service.details, renderOptions)}
+          </div>
           <h3 className="mt-8 mb-4 text-2xl tracking-tight font-bold text-gray-900 dark:text-white">
             Are you interested?
           </h3>
