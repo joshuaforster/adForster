@@ -14,21 +14,21 @@ export default function Contact() {
             <div className="mt-6 space-y-8 md:mt-8">
               <p className="flex items-start -mx-2">
                 <FaPhoneAlt className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" />
-                <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
+                <span className="mx-2 text-gray-700 truncate w-72 dark:text-white">
                   07342 367824
                 </span>
               </p>
 
               <p className="flex items-start -mx-2">
                 <FaEnvelope className="w-6 h-6 mx-2 text-blue-500 dark:text-blue-400" />
-                <span className="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
+                <span className="mx-2 text-gray-700 truncate w-72 dark:text-white">
                   davidforster990@gmail.com
                 </span>
               </p>
             </div>
 
             <div className="mt-6 w-80 md:mt-8">
-              <h3 className="text-gray-600 dark:text-gray-300">Follow us</h3>
+              <h3 className="text-gray-600 dark:text-white">Follow us</h3>
 
               <div className="flex mt-4 -mx-1.5">
                 <a
@@ -109,7 +109,7 @@ export default function Contact() {
 
           <div className="mt-8 lg:w-1/2 lg:mx-6">
             <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
-              <h1 className="text-lg font-medium text-gray-700">What do you want to ask</h1>
+              <h1 className="text-lg font-medium text-gray-700 dark:text-white">What do you want to ask</h1>
 
               <form
                 className="mt-6"
@@ -120,64 +120,64 @@ export default function Contact() {
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="flex-1">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm text-gray-600 dark:text-white">
                     Full Name
                   </label>
                   <input
                     type="text"
                     name="name"
                     placeholder="John Doe"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-white dark:bg-gray-900 dark:text-white dark:border-white focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     required
                   />
                 </div>
 
                 <div className="flex-1 mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm text-gray-600 dark:text-white">
                     Email address
                   </label>
                   <input
                     type="email"
                     name="email"
                     placeholder="johndoe@example.com"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-white dark:bg-gray-900 dark:text-white dark:border-white focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     required
                   />
                 </div>
 
                 <div className="flex-1 mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm text-gray-600 dark:text-white">
                     Subject
                   </label>
                   <input
                     type="text"
                     name="subject"
                     placeholder="How can we help you?"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-white dark:bg-gray-900 dark:text-white dark:border-white focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     required
                   />
                 </div>
 
                 <div className="flex-1 mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm text-gray-600 dark:text-white">
                     Postcode
                   </label>
                   <input
                     type="text"
                     name="postcode"
                     placeholder="Postcode"
-                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-white dark:bg-gray-900 dark:text-white dark:border-white focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     required
                   />
                 </div>
 
                 <div className="w-full mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label className="block mb-2 text-sm text-gray-600 dark:text-white">
                     Message
                   </label>
                   <textarea
                     name="message"
-                    className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-white dark:bg-gray-900 dark:text-white dark:border-white focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     placeholder="Message"
                     required
                   ></textarea>
