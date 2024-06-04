@@ -12,3 +12,8 @@
     background: #fff !important;
   }
 
+/* styles.css */
+.rich-text p {
+  margin-bottom: 1.5rem; /* Adjust the spacing as needed */
+  line-height: 1.6;
+}
