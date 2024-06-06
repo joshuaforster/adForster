@@ -109,7 +109,7 @@ export default function Contact() {
 
           <div className="mt-8 lg:w-1/2 lg:mx-6">
             <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
-              <h1 className="text-lg font-medium text-gray-700 dark:text-white">What do you want to ask</h1>
+              <h1 className="text-lg font-medium text-gray-700 dark:text-whitegit ">What do you want to ask</h1>
 
               <form
                 className="mt-6"
