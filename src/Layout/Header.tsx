@@ -43,7 +43,7 @@ export default function Header() {
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <img
-              src={theme === 'dark' ? 'images/AD Forster Logo Dark.png' : 'images/AD Forster Logo.png'}
+              src="logo.webp"
               className="h-10 sm:h-10"
               alt="Company Logo"
             />
