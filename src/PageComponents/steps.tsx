@@ -1,78 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import Button from "../CustomComponents/buttons";
-
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
-
-interface StepsFields {
-  bookingProcess: string;
-  bookingProcessInfo: any; // Change this to a more appropriate type if you have one
-}
-
-interface FetchResponse {
-  items: Array<{
-    fields: StepsFields;
-  }>;
-}
-
-const Steps: React.FC = () => {
-  const [content, setContent] = useState<StepsFields | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string>('');
-
-  useEffect(() => {
-    const url = `https://cdn.contentful.com/spaces/7y2nhmah12fi/environments/master/entries?access_token=VPNyQgxB1pWAka3k7hdMjZyWTPNuBmdWTmVnF1UydtQ&content_type=home`;
-
-    fetch(url)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! Status: ${res.status}`);
-        }
-        return res.json();
-      })
-      .then((data: FetchResponse) => {
-        if (data.items.length > 0) {
-          setContent(data.items[0].fields);
-        } else {
-          setError('Content not found');
-        }
-        setIsLoading(false);
-      })
-      .catch(err => {
-        console.error('Error fetching content:', err);
-        setError(err.message);
-        setIsLoading(false);
-      });
-  }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
+export default function Steps() {
   return (
-    <section className="bg-white dark:bg-gray-900">
-      <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl md:grid md:grid-cols-2 lg:py-16 lg:px-6 dark:text-white">
-        <div className="font-light text-gray-500 sm:text-lg dark:text-white lg:order-1">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            {content?.bookingProcess || 'Easy Booking Process'}
-          </h2>
-          <div className="mb-4">
-            {documentToReactComponents(content?.bookingProcessInfo)}
+    <div className="overflow-hidden dark:bg-gray-900 bg-white py-12 z-50">
+      <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
+          <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
+            <h2 className="text-3xl font-bold tracking-tight dark:text-white text-gray-900 sm:text-4xl">ONE TO ONE LEARNING LIKE NO OTHER</h2>
+            <p className="mt-6 text-xl leading-8 text-gray-600 dark:text-white">
+              SHAPING THE NEXT GENERATION OF PERSONAL TRAINING COURSES
+            </p>
+            <p className="mt-6 text-base leading-7 dark:text-white text-gray-600">
+              At Integrity, we take pride in giving the best possible experience by preparing our students to enter the fitness industry confidently and ready to thrive. Our team brings the course to life with plenty of professional experience and real, applicable tips and tricks that they have picked up over the years.
+            </p>
+            <p className="mt-6 text-base leading-7 text-gray-600 dark:text-white">
+              We look forward to helping you shape a new career path.
+            </p>
+            <div className="mt-10 flex">
+              <a
+                style={{ backgroundColor: '#CE1A1B' }}
+                href="www.google.com"
+                className="rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Join our team <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
-          <div className="mt-4">
-            <Button className="mr-4" to='/contact' variant='primary'>Get A Quote</Button>
+          <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
+            <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
+              <img
+                src="images/harryparis.png"
+                alt=""
+                className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover border dark:border-white"
+              />
+            </div>
+            <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
+              <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
+                <img
+                  src="images/IMG_1456.jpg"
+                  alt=""
+                  className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover border dark:border-white"
+                />
+              </div>
+              <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
+                <img
+                  src="images/harry.png"
+                  alt=""
+                  className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover border dark:border-white"
+                />
+              </div>
+              <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
+                <img
+                  src="images/IMG_1462.jpg"
+                  alt=""
+                  className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover border dark:border-white"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="hidden md:flex justify-center md:order-2">
-          <img className="w-full rounded-lg mt-4 md:mt-0" src="images/beforeafter/patio2.jpeg" alt="office content 1" />
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
-export default Steps;

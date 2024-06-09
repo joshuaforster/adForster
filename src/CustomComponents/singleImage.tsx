@@ -20,12 +20,14 @@ export default function SingleImage({ imageUrl, onPrevious, onNext, isFullscreen
 
   return (
     <div>
-      <img
-        src={imageUrl}
-        alt="placeholder"
-        className="object-cover w-full h-full cursor-pointer hover:opacity-90"
-        onClick={openFullscreen}
-      />
+      <div className="relative">
+        <img
+          src={imageUrl}
+          alt="placeholder"
+          className="object-cover w-full h-full cursor-pointer hover:opacity-90 aspect-square border-2 border-transparent dark:border-white"
+          onClick={openFullscreen}
+        />
+      </div>
 
       {isFullscreen && (
         <div

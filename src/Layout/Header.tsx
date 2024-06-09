@@ -43,8 +43,8 @@ export default function Header() {
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <img
-              src="logo.webp"
-              className="h-10 sm:h-10"
+              src={theme==='dark'?'images/logowhite.png':'images/logo.webp'}
+              className="h-14 my-2"
               alt="Company Logo"
             />
           </Link>
@@ -73,7 +73,7 @@ export default function Header() {
                         isDropdownOpen={isDropdownOpen}
                         toggleDropdown={toggleDropdown}
                         closeDropdown={closeDropdown}
-                        handleLinkClick={handleLinkClick} // Pass the function to ServiceDropdown
+                        handleLinkClick={handleLinkClick}
                       />
                     )}
                   </li>

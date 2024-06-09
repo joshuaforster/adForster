@@ -9,14 +9,15 @@ import ServiceDetail from './MainPages/services';
 import { ThemeProvider } from './CustomComponents/darkmode';
 import ScrollToTop from './CustomComponents/ScrollToTop';
 import PrivacyPolicy from './MainPages/privacypolicy';
+import Gallery from './MainPages/gallery';
 import TermsConditions from './MainPages/TermsConditions';
 import './App.css';
-import { ServicesProvider } from './CustomComponents/ServicesContext';
+import { CoursesProvider } from './CustomComponents/ServicesContext'; // Correct import
 
 function App() {
   return (
     <ThemeProvider>
-      <ServicesProvider>
+      <CoursesProvider>
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
@@ -24,6 +25,7 @@ function App() {
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/faq' element={<FAQ />} />
+              <Route path='/gallery' element={<Gallery />} />
               <Route path='/services/:id' element={<ServiceDetail />} />
               <Route path='/contact' element={<Contact />} />
               <Route path='/privacy-policy' element={<PrivacyPolicy />} />
@@ -31,7 +33,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </ServicesProvider>
+      </CoursesProvider>
     </ThemeProvider>
   );
 }
